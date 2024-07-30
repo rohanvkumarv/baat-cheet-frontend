@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { socket } from "./socket";
+import { Button } from "@radix-ui/themes";
 
 const App = () => {
     const [value, setValue] = React.useState("");
@@ -37,7 +38,7 @@ const App = () => {
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
-                <button type="submit">send</button>
+                <Button>Send</Button>
             </form>
         </div>
     );
